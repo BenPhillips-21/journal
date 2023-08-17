@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('http://localhost:6969/entries')
+      const res = await fetch(`${import.meta.env.VITE_API_HOST}/entries`)
       const data = await res.json()
       setEntries(data)
     })()
